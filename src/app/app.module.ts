@@ -7,17 +7,21 @@ import {ThreadService} from "./services/thread.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import { ThreadDetailComponent } from './components/thread-detail/thread-detail.component';
+import { HomeComponent } from './components/home/home.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ThreadsListComponent,
-    ThreadDetailComponent
+    ThreadDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ThreadService],
   bootstrap: [AppComponent]
