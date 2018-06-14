@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>ID</th>
+      <th>Script</th>
+      <th>Status</th>
+      <th>Return Value</th>
+    </tr>
+    <tr *ngFor="let thread of threads">
+      <td>
+        <a [routerLink]="['/thread', thread.content.id]">{{thread.content.id}}</a>
+      </td>
+      <td>
+        {{thread.content.script}}
+      </td>
+      <td>
+        {{thread.content.status}}
+      </td>
+      <td>
+        {{thread.content.result}}
+      </td>
+    </tr>
+  </table>
+</div>
