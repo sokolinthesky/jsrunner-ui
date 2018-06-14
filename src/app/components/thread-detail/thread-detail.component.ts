@@ -16,7 +16,7 @@ export class ThreadDetailComponent implements OnInit {
     this.getThread(this.route.snapshot.params.id);
   }
 
-  getThread(id: number) {
+  getThread(id) {
     this.threadService.getThreadById(id).subscribe(
       data => { this.thread = data; },
       error => console.error(error)

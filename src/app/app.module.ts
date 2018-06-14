@@ -9,13 +9,16 @@ import {HttpClientModule} from "@angular/common/http";
 import { ThreadDetailComponent } from './components/thread-detail/thread-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { StopThreadComponent } from './components/stop-thread/stop-thread.component';
+import {ThreadGuardService} from "./services/thread-guard.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     ThreadsListComponent,
     ThreadDetailComponent,
-    HomeComponent
+    HomeComponent,
+    StopThreadComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [ThreadService],
+  providers: [ThreadService, ThreadGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,4 +20,7 @@
       <div class="form-control">{{thread.content.result}}</div>
     </div>
   </div>
+  <div class="row">
+    <a class="btn btn=primary" [routerLink]="['/thread/stop', thread.content.id]">Stop script</a>
+  </div>
 </div>

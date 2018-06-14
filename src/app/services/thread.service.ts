@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 const getAllThreadsServerUrl = '/server/all';
 const getThreadByIdServerUrl = '/server/script/';
 const executeScriptUrl = '/server/execute';
+const stopScriptUrl = '/server/remove/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type' : 'application/json' })
@@ -26,5 +27,9 @@ export class ThreadService {
 
   createNewThread(form) {
     return this.httpClient.post(executeScriptUrl, form.script, httpOptions);
+  }
+
+  stopThread(id: number) {
+    return this.httpClient.delete(stopScriptUrl + id);
   }
 }
